@@ -1,0 +1,63 @@
+BAK CAPITALS WEBSITE — DEPLOYMENT GUIDE
+
+This package is a static HTML/CSS/JS website based on the supplied BAK Capitals About document and Website Theme workbook.
+
+IMPORTANT:
+- The site uses BAK Capitals' supplied wording and planned-sector information.
+- Portfolio/sector items marked "PLANNED" are presented as planned, not existing businesses.
+- Replace hello@bakcapital.com.np if you want another email address.
+- No logo image was supplied with the files, so the header uses a typographic BAK mark. If you have the official logo, place it in assets/images/ and replace the text logo.
+
+OPTION A — CPANEL (recommended if your NS1/NS2 point to a normal web host)
+1. Extract this ZIP on your computer.
+2. Log into your hosting control panel (usually cPanel).
+3. Open File Manager.
+4. Open public_html.
+5. Upload index.html and the entire "assets" folder.
+6. Your final structure should be:
+   public_html/
+      index.html
+      assets/
+         css/style.css
+         js/main.js
+7. Do NOT put the files inside public_html/BAK_Capitals_website/ unless you want the URL to include that folder.
+8. Visit https://bakcapital.com.np
+9. In cPanel, open SSL/TLS Status or Let's Encrypt SSL and enable a free SSL certificate if your host has it.
+10. Test both http://bakcapital.com.np and https://bakcapital.com.np. Use HTTPS as the final address.
+
+DOMAIN / NAMESERVER PATH
+If your domain currently has:
+   ns1.yourhost...
+   ns2.yourhost...
+then those nameservers point the domain to your hosting account. You do not need Cloudflare just to publish this site.
+If the nameservers are not yet set, enter the exact NS1 and NS2 supplied by your hosting provider in your .com.np domain management panel.
+
+IF YOUR HOST USES DIRECTADMIN
+1. Log in to DirectAdmin.
+2. Go to File Manager > domains > bakcapital.com.np > public_html.
+3. Upload index.html and assets/.
+4. Enable SSL/Let's Encrypt in Account Manager > SSL Certificates.
+5. Open https://bakcapital.com.np.
+
+IF YOUR HOST USES PLESK
+1. Websites & Domains > bakcapital.com.np > File Manager.
+2. Open httpdocs.
+3. Upload index.html and assets/.
+4. Enable Let's Encrypt under SSL/TLS Certificates.
+5. Open https://bakcapital.com.np.
+
+EMAIL
+The website currently displays hello@bakcapital.com.np as a placeholder contact. A website mailto link does NOT create that mailbox.
+To create the actual mailbox, use your hosting panel:
+cPanel > Email Accounts > Create
+Example: hello@bakcapital.com.np
+
+EDITING
+Main website content: index.html
+Design: assets/css/style.css
+Mobile menu: assets/js/main.js
+
+SOURCE BASIS
+Content was adapted from the supplied "bak capitals about section.docx".
+Visual theme follows the supplied "BAK_Capitals_Website_Theme.xlsx":
+black/charcoal #151517 / #2A2A2D, gold #F2C230, off-white #F7F5EF, serif headings, sans-serif body, gold buttons, gold-bordered sector cards.
